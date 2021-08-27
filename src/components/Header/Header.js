@@ -2,7 +2,7 @@ import Header from "./AddItem";
 
 function Nav() {
   return (
-    <div id="myDIV" class="header">
+    <div id="myDIV" className="header">
       <Header />
     </div>
   );

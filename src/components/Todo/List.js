@@ -1,12 +1,9 @@
-function list() {
+function list(props) {
+  const { todo , idx } = props;
+
   return (
     <>
-      <li>Hit the gym</li>
-      <li className="checked">Pay bills</li>
-      <li>Meet George</li>
-      <li>Buy eggs</li>
-      <li>Read a book</li>
-      <li>Organize office</li>
+      <li key={idx} >{todo.msg}</li>
     </>
   );
 }
