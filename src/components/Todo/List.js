@@ -3,9 +3,10 @@ function list(props) {
 
   return (
     <>
-      <li key={idx} >{todo.msg}</li>
+      <li key={idx} className = {todo.isDone ? "checked" : ""} >{todo.msg}</li>
     </>
   );
 }
 
 export default list;
+ 
