@@ -5,7 +5,12 @@ function AddItem(p) {
   const { takeItem } = p;
 
   const taskAdded = () => {
-    takeItem(item)
+    if (item.length > 1) {
+      takeItem(item)
+    }
+    else {
+      alert("Must Enter Something"      )
+    }
     }
 
     return (
