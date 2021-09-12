@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Todo from "./components/Todo/Todo";
@@ -11,7 +11,21 @@ const App = () => {
     { msg: "Buy Eggs", isDone: false },
   ];
 
-  const [myTodo, setTodo] = useState(todoList);
+
+
+  const [myTodo, setTodo] = useState([]);
+
+  useEffect(() => {
+    const prevTodos = JSON.parse(localStorage.getItem("Todos"))
+    if (prevTodos) {
+      setTodo(prevTodos)
+    }
+    
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("Todos", JSON.stringify(myTodo));
+  }, [myTodo])
 
   const takeIt = (item) => {
     console.log("This is App", item);

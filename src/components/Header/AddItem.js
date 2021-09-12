@@ -7,6 +7,7 @@ function AddItem(p) {
   const taskAdded = () => {
     if (item.length > 1) {
       takeItem(item)
+      setItem("")
     }
     else {
       alert("Must Enter Something"      )
