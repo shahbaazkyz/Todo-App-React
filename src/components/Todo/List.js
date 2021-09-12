@@ -9,6 +9,7 @@ function list(props) {
             <li
               onClick={() => done(indexx)}
               className={value.isDone ? "checked" : ""}
+              key={indexx}
             >
               {value.msg}
               <span
